@@ -1,3 +1,5 @@
+// New keyword in JavaScript is used to create an instance of an object that has a constructor function
+
 var user = function (firstName, courseCount) {
     this.firstName=firstName;
     this.courseCount=courseCount;
