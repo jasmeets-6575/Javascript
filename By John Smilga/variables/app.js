@@ -9,4 +9,4 @@ let address, zip, state;
 address = "1010 wall street";
 zip = "2323";
 state= "YUPSS";
-console.log(address, zip,state);
+console.log(address, zip,state);  
