@@ -28,7 +28,7 @@ const person = {
 
 console.log(person.job.title);
 console.log(person.job.company.address);
-console.log(person);
+// console.log(person);
 console.log(person['name']);
 console.log(person['random-value']);
 
