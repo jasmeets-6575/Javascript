@@ -8,8 +8,8 @@ const text = "some text";
 
 const num = 45;
 
-let value1 = true;
-let value2 = false;
+let val1 = true;
+let val2 = false;
 
 const result = null;
 
@@ -17,8 +17,8 @@ let names;
 
 console.log(typeof text);
 console.log(typeof num);
-console.log(typeof value1);
-console.log(typeof value2);
+console.log(typeof valu1);
+console.log(typeof valu2);
 console.log(typeof result);
 console.log(typeof names);
 console.log(typeof "HEllo World");
