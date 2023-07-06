@@ -1,4 +1,4 @@
-const calculateTotal = function random(subTotal, tax) {
+const calculateTotal = function random(subTotal: number, tax: number) {
   return subTotal + tax;
 };
 
