@@ -28,8 +28,6 @@ console.log(allNames);
 //pop
 allNames.pop();
 // allNames.pop();
-// allNames.pop();
-// allNames.pop();
 console.log(allNames);
 // splice - mutates original array
 const specificNames = allNames.splice(0, 3);
