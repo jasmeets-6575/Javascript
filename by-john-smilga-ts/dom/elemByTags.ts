@@ -13,5 +13,7 @@ betterItems.forEach(function (item) {
 console.log(items);
 console.log(betterItems);
 
-const listItems = document.getElementsByClassName("special");
+const listItems = document.getElementsByClassName(
+  "special"
+) as HTMLCollectionOf<HTMLElement>;
 listItems[2].style.color = "blue";
