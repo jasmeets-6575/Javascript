@@ -1,17 +1,14 @@
-// getAttribute();
-// setAttribute();
-
-const first1 = document.querySelector(".first")!;
+const first1 = document.querySelector(".first") as HTMLElement;
 const idValue = first1.getAttribute("id");
 // console.log(idValue);
 
-const link = document.getElementById("link")!;
+const link = document.getElementById("link") as HTMLAnchorElement;
 const showLink = link.getAttribute("href");
 console.log(showLink);
 
-const last = link.nextElementSibling!;
+const last = link.nextElementSibling as HTMLElement;
 last.setAttribute("class", "first");
-last.textContent = "i also have a class of first";
+last.textContent = "I also have a class of first";
 console.log(last);
 
 const links = document.querySelectorAll(".first");
