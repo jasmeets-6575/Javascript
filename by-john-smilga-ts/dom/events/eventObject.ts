@@ -1,20 +1,21 @@
-const eoHeading = document.querySelector("h1") as HTMLHeadingElement;
-const eoBtn = document.querySelector(".btn") as HTMLButtonElement;
-const link = document.getElementById("link") as HTMLElement;
+const eoHeading = document.querySelector("h1") as HTMLElement;
+const eoBtn = document.querySelector(".btn") as HTMLElement | null;
+const link = document.getElementById("link") as HTMLAnchorElement;
 
-eoHeading.addEventListener("click", (event) => {
+eoHeading.addEventListener("click", (event: MouseEvent) => {
   console.log(event.currentTarget);
   console.log(this);
 });
 
-eoBtn.addEventListener("click", (evt) => {
-  const { currentTarget } = evt;
-  if (currentTarget instanceof HTMLElement) {
-    currentTarget.classList.add("blue");
-  }
-});
+if (eoBtn) {
+  eoBtn.addEventListener("click", function (event: MouseEvent) {
+    const currentTarget = event.currentTarget as HTMLElement;
+    currentTarget?.classList.add("blue");
+    console.log(event.type);
+  });
+}
 
-function someFunc(e) {
+function someFunc(e: Event) {
   e.preventDefault();
 }
 
