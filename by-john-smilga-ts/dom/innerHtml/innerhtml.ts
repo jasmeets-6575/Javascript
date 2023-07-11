@@ -12,9 +12,6 @@ const ul = document.createElement("ul");
 ul.innerHTML = `<li class="item">${randomVar}</li>
       <li>list item</li> <li>list item</li>`;
 document.body.appendChild(ul);
-<<<<<<< HEAD
 
 div.textContent = `<li class="item">${randomVar}</li>
       <li>list item</li> <li>list item</li>`;
-=======
->>>>>>> 7166909b5d8ed0f01b9b3fec46d665cf2adc1c75
