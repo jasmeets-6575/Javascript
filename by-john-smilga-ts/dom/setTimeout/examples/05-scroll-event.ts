@@ -37,3 +37,15 @@ btn.addEventListener("click", function () {
   const values = box.getBoundingClientRect();
   console.log(values);
 });
+
+/////////////////////////////////////
+
+/*
+The resize event fires when the document view (window) has been resized.
+
+
+ */
+
+window.addEventListener("resize", function () {
+  console.log(window.innerWidth);
+});
