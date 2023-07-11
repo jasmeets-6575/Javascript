@@ -7,9 +7,10 @@ eoHeading.addEventListener("click", (event) => {
   console.log(this);
 });
 
-eoBtn.addEventListener("click", function (event: { currentTarget }) {
-  if (event.currentTarget) {
-    event.currentTarget.classList.add("blue");
+eoBtn.addEventListener("click", (evt) => {
+  const { currentTarget } = evt;
+  if (currentTarget instanceof HTMLElement) {
+    currentTarget.classList.add("blue");
   }
 });
 
