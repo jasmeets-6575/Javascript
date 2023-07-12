@@ -8,7 +8,7 @@ btns.forEach(function (btn: Element) {
     const styles = (e.currentTarget as Element).classList;
     if (styles.contains("decrease")) {
       count--;
-    } else if (styles.contains("decrease")) {
+    } else if (styles.contains("increase")) {
       count++;
     } else {
       count = 0;
