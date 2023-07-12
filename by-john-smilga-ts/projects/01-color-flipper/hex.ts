@@ -16,3 +16,18 @@ const hex: (string | number)[] = [
   "E",
   "F",
 ];
+
+const btn = document.getElementById("btn") as HTMLButtonElement;
+const color = document.querySelector(".color") as HTMLElement;
+
+btn.addEventListener("click", function () {
+  let hexColor = "#";
+  for (let i = 0; i < 6; i++) {
+    hexColor += hex[getRandomNumber()];
+  }
+  document.body.style.backgroundColor = hexColor;
+  color.textContent = hexColor;
+});
+function getRandomNumber() {
+  return Math.floor(Math.random() * hex.length);
+}
