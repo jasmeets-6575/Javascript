@@ -80,7 +80,7 @@ class Gallery {
       (this.modalImages.lastElementChild as HTMLImageElement);
     selected?.classList.remove("selected");
     prev?.classList.add("selected");
-    if (prev) {
+    if (prev ) {
       this.setMainImage(prev);
     }
   }
