@@ -1,12 +1,9 @@
-// Array includes() - checks if a string contains another string.
-// Array includes - checks if the item is an array
+const groceries: string[] = ["milk", "bread", "meat"];
 
-const groceries = ['milk', 'bread', 'meat'];
+let randomItem: string = "lemon";
+randomItem = "milk";
 
-let randomItem = 'lemon';
-randomItem = 'milk';
-
-const isIncluded = groceries.includes(randomItem);
+const isIncluded: boolean = groceries.includes(randomItem);
 
 // console.log(isIncluded);
 
