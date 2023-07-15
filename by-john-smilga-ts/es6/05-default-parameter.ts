@@ -1,12 +1,12 @@
-// default parameters, arrow function gotchas
+const john: string = "John";
+const peter: string = "Peter";
 
-const john = 'John';
-const peter = 'Peter';
-
-function sayHi(person = 'Susan') {
+function sayHi(person: string = "Susan"): void {
   console.log(`Hi ${person}`);
 }
-const sayHello = (person = 'BOB') => console.log(`Hello ${person}`);
+
+const sayHello = (person: string = "BOB"): void =>
+  console.log(`Hello ${person}`);
 
 sayHi();
 sayHello(peter);
