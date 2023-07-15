@@ -17,7 +17,6 @@ const updateCount = (el: HTMLElement) => {
 
     el.textContent = `${initialValue}+`;
   }, 1);
-  // console.log(increaseCount);
 };
 
 items.forEach((item: HTMLElement) => {
