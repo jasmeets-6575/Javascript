@@ -1,10 +1,13 @@
-// Arrow Functions or Fat Arrow Functions
-// 'this' keyword
+interface Person {
+  firstName: string;
+  lastName: string;
+  sayName(): void;
+}
 
-const bob = {
+const bob: Person = {
   firstName: "bob",
   lastName: "smith",
-  sayName: function() {
+  sayName: function () {
     console.log(this);
     setTimeout(() => {
       console.log(this);
@@ -13,10 +16,10 @@ const bob = {
   },
 };
 
-const anna = {
+const anna: Person = {
   firstName: "anna",
   lastName: "sanders",
-  sayName: () => {
+  sayName: function (this: Person) {
     console.log(this);
     console.log(`Hello, my name is ${this.firstName} ${this.lastName}`);
   },
