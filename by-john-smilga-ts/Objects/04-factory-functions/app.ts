@@ -1,25 +1,28 @@
-// Blue Print
-// Factory Functions and Constructor Functions
-// Factory Functions
+interface Person {
+  firstName: string;
+  lastName: string;
+  fullName: () => void;
+}
 
-// const john = {
-//   firstName: 'john',
-//   lastName: 'anderson',
-//   fullName: function () {
-//     console.log(
-//       `My full name is ${this.firstName} ${this.lastName} and I love JS`
-//     );
-//   },
-// };
-// const bob = {
-//   firstName: 'peter',
-//   lastName: 'sanders',
-//   fullName: function () {
-//     console.log(`My full name is ${this.firstName} ${this.lastName}`);
-//   },
-// };
+const john: Person = {
+  firstName: "john",
+  lastName: "anderson",
+  fullName: function () {
+    console.log(
+      `My full name is ${this.firstName} ${this.lastName} and I love JS`
+    );
+  },
+};
 
-function createPerson(firstName, lastName) {
+const bob: Person = {
+  firstName: "peter",
+  lastName: "sanders",
+  fullName: function () {
+    console.log(`My full name is ${this.firstName} ${this.lastName}`);
+  },
+};
+
+function createPerson(firstName: string, lastName: string): Person {
   return {
     firstName: firstName,
     lastName: lastName,
@@ -31,9 +34,9 @@ function createPerson(firstName, lastName) {
   };
 }
 
-const john = createPerson("john", "anderson");
-john.fullName();
-const bob = createPerson("susy", "apple");
-bob.fullName();
-const susy = createPerson("bob", "jordan");
+const John: Person = createPerson("john", "anderson");
+John.fullName();
+const Bob: Person = createPerson("susy", "apple");
+Bob.fullName();
+const susy: Person = createPerson("bob", "jordan");
 susy.fullName();
