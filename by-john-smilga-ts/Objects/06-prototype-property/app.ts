@@ -1,22 +1,24 @@
-/*
-Prototypal Inheritance Model
-Javascript uses prototypal inheritance model. That means that every constructor function/class has a prototype property that is shared by every instance of the constructor/class. So any properties and methods or prototype can be acessed by every instance. prototype property returns a object
-*/
+class Account {
+  name: string;
+  balance: number;
 
-function Account(name, initialBalance) {
-  this.name = name;
-  this.balance = initialBalance;
+  constructor(name: string, initialBalance: number) {
+    this.name = name;
+    this.balance = initialBalance;
+  }
+
+  static bank: string = "CHASE";
+
+  deposit(amount: number): void {
+    this.balance += amount;
+    console.log(`Hello ${this.name}, your balance is ${this.balance}`);
+  }
 }
 
-const john = new Account('john', 200);
-const bob = new Account('bob', 0);
+const john: Account = new Account("john", 200);
+const bob: Account = new Account("bob", 0);
 
-Account.prototype.bank = 'CHASE';
-Account.prototype.deposit = function (amount) {
-  this.balance += amount;
-  console.log(`Hello ${this.name}, your balance is ${this.balance}`);
-};
-console.log(john.bank);
+console.log(Account.bank);
 console.log(bob);
 
 john.deposit(300);
